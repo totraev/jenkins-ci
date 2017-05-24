@@ -2,7 +2,7 @@ FROM jenkinsci/blueocean
 
 USER root
 
-ARG compose_version=1.8.0
+ARG compose_version=1.13.0
 
 RUN apk --no-cache add python py-pip git &&\
     git clone --branch ${compose_version} https://github.com/docker/compose.git /code/compose &&\
