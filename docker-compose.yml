@@ -7,7 +7,7 @@ services:
       - workspace
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./blueocean_home:/var/jenkins_home
+      - /var/jenkins_home:/var/jenkins_home
     ports:
       - 8080:8080
       - 4040:4040
@@ -18,8 +18,3 @@ services:
       - 80:80
     links:
       - jenkins
-
-  workspace:
-    image: alpine:3.5
-    volumes:
-      - /opt/jenkins/data/workspace
